@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LottoAutoWin – Bot AI Nhận Cược Tự Động Qua Telegram</title>
+    <meta name="description" content="LottoAutoWin – Hệ thống AI nhận cược tự động qua Telegram. Xử lý trong 0.1 giây, chính xác 100%, hoạt động 24/7. Được 500+ đại lý tin dùng.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="v7.css">
+</head>
+<body>
+
+<!-- ══════ NAV ══════ -->
+<nav class="topnav" id="topnav">
+    <div class="w topnav-inner">
+        <a href="#" class="logo">
+            <img src="logo.jpg.png" alt="Logo" onerror="this.style.display='none'">
+            <b>LottoAutoWin</b>
+        </a>
+        <div class="menu" id="menu">
+            <a href="#hero" class="on" onclick="cMenu()">Trang chủ</a>
+            <a href="#why" onclick="cMenu()">Tại sao chọn</a>
+            <a href="#how" onclick="cMenu()">Cách hoạt động</a>
+            <a href="#features" onclick="cMenu()">Tính năng</a>
+            <a href="#demo" onclick="cMenu()">Demo</a>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px">
+            <button class="nav-btn" onclick="openM()">Dùng Thử</button>
+            <button class="burger" onclick="tMenu()"><i class="fas fa-bars" id="bIcon"></i></button>
+        </div>
+    </div>
+</nav>
+
+<!-- ══════ HERO ══════ -->
+<section class="hero" id="hero">
+    <div class="w hero-row">
+        <div class="hero-text" data-v>
+            <div class="hero-tag">
+                <span class="pulse"></span>
+                Hệ thống đang hoạt động
+                <span>LIVE</span>
+            </div>
+            <h1>Tự Động Nhận Cược<br><span class="grad-text">Chính Xác Tuyệt Đối</span></h1>
+            <p class="hero-p">Bot Telegram AI thế hệ mới — xử lý hàng nghìn lệnh cược mỗi ngày mà không cần con người can thiệp. Tiết kiệm 90% thời gian, loại bỏ 100% sai sót.</p>
+            <div class="hero-btns">
+                <button class="btn1" onclick="openM()"><i class="fas fa-rocket"></i> Dùng Thử Miễn Phí</button>
+                <a href="#demo" class="btn2"><i class="fas fa-play"></i> Xem Demo</a>
+            </div>
+            <div class="hero-pills">
+                <span class="hero-pill"><i class="fas fa-check-circle"></i> <b>500+</b> đại lý</span>
+                <span class="hero-pill"><i class="fas fa-check-circle"></i> <b>99.9%</b> chính xác</span>
+                <span class="hero-pill"><i class="fas fa-check-circle"></i> <b>24/7</b> online</span>
+            </div>
+        </div>
+
+        <!-- LIVE TERMINAL DEMO -->
+        <div class="terminal" data-v="r">
+            <div class="term-bar">
+                <span class="term-dot" style="background:#ff5f57"></span>
+                <span class="term-dot" style="background:#febc2e"></span>
+                <span class="term-dot" style="background:#28c840"></span>
+                <span>LottoAutoWin Bot — Live</span>
+            </div>
+            <div class="term-body" id="termBody">
+                <!-- Lines injected by JS -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════ TRUST BAR ══════ -->
+<div class="trust" data-v>
+    <div class="w trust-inner">
+        <div class="trust-item"><div class="tv"><span>500</span>+</div><div class="tl">Đại lý sử dụng</div></div>
+        <div class="trust-item"><div class="tv"><span>2M</span>+</div><div class="tl">Lệnh đã xử lý</div></div>
+        <div class="trust-item"><div class="tv"><span>99.9</span>%</div><div class="tl">Độ chính xác</div></div>
+        <div class="trust-item"><div class="tv"><span>0.1</span>s</div><div class="tl">Thời gian phản hồi</div></div>
+        <div class="trust-item"><div class="tv"><span>24</span>/7</div><div class="tl">Hoạt động liên tục</div></div>
+    </div>
+</div>
+
+<!-- ══════ PROBLEM → SOLUTION ══════ -->
+<section class="ps" id="why">
+    <div class="w">
+        <div class="ps-head" data-v>
+            <div class="tag"><i class="fas fa-lightbulb"></i> Tại sao chọn LottoAutoWin?</div>
+            <h2>Từ <span class="grad-text">Thủ Công</span> Sang <span class="grad-text">Tự Động</span></h2>
+            <p>So sánh cách làm truyền thống và giải pháp thông minh mà chúng tôi mang đến.</p>
+        </div>
+
+        <div class="ps-grid">
+            <!-- PROBLEMS -->
+            <div class="ps-col" data-v="l">
+                <div class="ps-card bad">
+                    <div class="ps-ico"><i class="fas fa-clock"></i></div>
+                    <div>
+                        <h4>Mất 4-6 tiếng mỗi ngày</h4>
+                        <p>Ngồi canh group, đọc từng tin nhắn, ghi chép thủ công — mệt mỏi, dễ sai.</p>
+                    </div>
+                </div>
+                <div class="ps-card bad">
+                    <div class="ps-ico"><i class="fas fa-exclamation-triangle"></i></div>
+                    <div>
+                        <h4>Sai sót liên tục</h4>
+                        <p>Nhầm số, sót lệnh, tính toán sai — mỗi lỗi đều gây thất thoát tiền bạc thực tế.</p>
+                    </div>
+                </div>
+                <div class="ps-card bad">
+                    <div class="ps-ico"><i class="fas fa-user-slash"></i></div>
+                    <div>
+                        <h4>Phụ thuộc con người</h4>
+                        <p>Nghỉ phép, ốm đau, quên kiểm tra — hệ thống ngưng hoạt động ngay lập tức.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ARROW -->
+            <div class="ps-arrow" data-v>
+                <i class="fas fa-arrow-right"></i>
+            </div>
+
+            <!-- SOLUTIONS -->
+            <div class="ps-col" data-v="r">
+                <div class="ps-card good">
+                    <div class="ps-ico"><i class="fas fa-bolt"></i></div>
+                    <div>
+                        <h4>Xử lý trong 0.1 giây</h4>
+                        <p>Bot AI đọc, phân tích và phản hồi tức thì — bạn chỉ cần xem báo cáo.</p>
+                    </div>
+                </div>
+                <div class="ps-card good">
+                    <div class="ps-ico"><i class="fas fa-shield-alt"></i></div>
+                    <div>
+                        <h4>Chính xác 99.9%</h4>
+                        <p>Không nhầm lẫn, không sót lệnh. Mọi giao dịch được kiểm tra 3 lớp tự động.</p>
+                    </div>
+                </div>
+                <div class="ps-card good">
+                    <div class="ps-ico"><i class="fas fa-robot"></i></div>
+                    <div>
+                        <h4>Hoạt động 24/7 tự động</h4>
+                        <p>Không nghỉ, không mệt, không quên. Bot chạy liên tục kể cả khi bạn ngủ.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════ HORIZONTAL STEPS ══════ -->
+<section class="steps" id="how">
+    <div class="w">
+        <div class="steps-head" data-v>
+            <div class="tag"><i class="fas fa-route"></i> Quy trình triển khai</div>
+            <h2>Bắt Đầu Trong <span class="grad-text">4 Bước Đơn Giản</span></h2>
+            <p>Từ đăng ký đến vận hành chỉ trong vòng 24 giờ — không cần kỹ thuật.</p>
+        </div>
+        <div class="steps-row">
+            <div class="step" data-v>
+                <div class="step-num">01</div>
+                <h4>Liên Hệ Tư Vấn</h4>
+                <p>Nhắn tin qua Telegram, chuyên gia phân tích nhu cầu và đề xuất gói phù hợp.</p>
+            </div>
+            <div class="step" data-v style="transition-delay:.1s">
+                <div class="step-num">02</div>
+                <h4>Cài Đặt Bot</h4>
+                <p>Hệ thống được cài đặt và tích hợp vào group Telegram trong vòng 24 giờ.</p>
+            </div>
+            <div class="step" data-v style="transition-delay:.2s">
+                <div class="step-num">03</div>
+                <h4>Cấu Hình & Test</h4>
+                <p>Tùy chỉnh cú pháp, tỷ lệ, giới hạn và chạy thử đảm bảo chính xác 100%.</p>
+            </div>
+            <div class="step" data-v style="transition-delay:.3s">
+                <div class="step-num">04</div>
+                <h4>Vận Hành Tự Động</h4>
+                <p>Bot chạy 24/7, bạn chỉ cần mở dashboard theo dõi doanh thu và báo cáo.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════ FEATURE TABS ══════ -->
+<section class="ftabs" id="features">
+    <div class="w">
+        <div class="ftabs-head" data-v>
+            <div class="tag"><i class="fas fa-gem"></i> Tính năng nổi bật</div>
+            <h2>Mọi Thứ Bạn Cần, <span class="grad-text">Trong Một Hệ Thống</span></h2>
+            <p>Khám phá từng tính năng giúp LottoAutoWin trở thành giải pháp hàng đầu.</p>
+        </div>
+
+        <div class="tab-nav" data-v>
+            <button class="tab-btn on" data-tab="t1"><i class="fas fa-bolt"></i> Xử lý tức thì</button>
+            <button class="tab-btn" data-tab="t2"><i class="fas fa-layer-group"></i> Đa Group</button>
+            <button class="tab-btn" data-tab="t3"><i class="fas fa-chart-bar"></i> Báo cáo</button>
+            <button class="tab-btn" data-tab="t4"><i class="fas fa-lock"></i> Bảo mật</button>
+        </div>
+
+        <!-- TAB 1 -->
+        <div class="tab-panel on" id="t1" data-v>
+            <div class="tab-img">
+                <img src="hero_illus.png" alt="Xử lý tức thì" onerror="this.src='banner2.jpg.jpg'">
+            </div>
+            <div class="tab-info">
+                <h3>Xử Lý Lệnh Cược Trong 0.1 Giây</h3>
+                <p>Bot AI nhận diện mọi cú pháp cược — dù phức tạp hay viết tắt — và xử lý tức thì mà không bỏ sót bất kỳ tin nhắn nào.</p>
+                <ul class="tab-list">
+                    <li><i class="fas fa-check-circle"></i> Nhận diện tự động mọi cú pháp cược</li>
+                    <li><i class="fas fa-check-circle"></i> Phản hồi trong 0.1 giây</li>
+                    <li><i class="fas fa-check-circle"></i> Hoạt động liên tục 24/7 không ngừng</li>
+                    <li><i class="fas fa-check-circle"></i> Xử lý hàng nghìn lệnh mỗi phút</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TAB 2 -->
+        <div class="tab-panel" id="t2">
+            <div class="tab-img">
+                <img src="network_illus.png" alt="Đa group" onerror="this.src='banner3.jpg.jpg'">
+            </div>
+            <div class="tab-info">
+                <h3>Quản Lý Hàng Chục Group Cùng Lúc</h3>
+                <p>Một bot duy nhất kiểm soát tất cả — đồng bộ lệnh cược, quản lý dòng tiền và báo cáo từ mọi group Telegram.</p>
+                <ul class="tab-list">
+                    <li><i class="fas fa-check-circle"></i> Kết nối không giới hạn group</li>
+                    <li><i class="fas fa-check-circle"></i> Đồng bộ dữ liệu real-time</li>
+                    <li><i class="fas fa-check-circle"></i> Phân quyền quản lý theo cấp</li>
+                    <li><i class="fas fa-check-circle"></i> Tổng hợp tất cả về 1 dashboard</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TAB 3 -->
+        <div class="tab-panel" id="t3">
+            <div class="tab-img">
+                <img src="dashboard_illus.png" alt="Báo cáo" onerror="this.src='banner4.jpg.png'">
+            </div>
+            <div class="tab-info">
+                <h3>Báo Cáo Trực Quan Theo Thời Gian Thực</h3>
+                <p>Dashboard hiển thị chi tiết mọi chỉ số — doanh thu, lệnh cược, lợi nhuận, xu hướng — cập nhật từng giây.</p>
+                <ul class="tab-list">
+                    <li><i class="fas fa-check-circle"></i> Biểu đồ doanh thu trực quan</li>
+                    <li><i class="fas fa-check-circle"></i> Lịch sử giao dịch chi tiết</li>
+                    <li><i class="fas fa-check-circle"></i> Xuất báo cáo Excel/PDF</li>
+                    <li><i class="fas fa-check-circle"></i> Cảnh báo bất thường tự động</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TAB 4 -->
+        <div class="tab-panel" id="t4">
+            <div class="tab-img">
+                <img src="hero_illus.png" alt="Bảo mật" onerror="this.src='banner2.jpg.jpg'">
+            </div>
+            <div class="tab-info">
+                <h3>Bảo Mật Đa Lớp, Kiểm Soát Tuyệt Đối</h3>
+                <p>Mọi giao dịch được mã hóa end-to-end. Hệ thống phân quyền chặt chẽ, đảm bảo chỉ người được ủy quyền mới truy cập được.</p>
+                <ul class="tab-list">
+                    <li><i class="fas fa-check-circle"></i> Mã hóa dữ liệu end-to-end</li>
+                    <li><i class="fas fa-check-circle"></i> Phân quyền đa cấp</li>
+                    <li><i class="fas fa-check-circle"></i> Audit log mọi hoạt động</li>
+                    <li><i class="fas fa-check-circle"></i> Kiểm soát 100% dòng tiền</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════ VIDEO ══════ -->
+<section class="vid" id="demo">
+    <div class="w">
+        <div class="vid-head" data-v>
+            <div class="tag"><i class="fas fa-play-circle"></i> Video demo</div>
+            <h2>Xem Hệ Thống <span class="grad-text">Hoạt Động Thực Tế</span></h2>
+            <p>2 phút trải nghiệm trực quan cách LottoAutoWin tự động hóa mọi thứ cho bạn.</p>
+        </div>
+        <div class="browser" data-v>
+            <div class="browser-bar">
+                <div class="browser-dots">
+                    <span style="background:#ff5f57"></span>
+                    <span style="background:#febc2e"></span>
+                    <span style="background:#28c840"></span>
+                </div>
+                <div class="browser-url"><i class="fas fa-lock" style="margin-right:6px"></i> lottoautowin.com/demo</div>
+            </div>
+            <video controls poster="logo.jpg.png">
+                <source src="video final.MOV" type="video/mp4">
+            </video>
+        </div>
+    </div>
+</section>
+
+<!-- ══════ TESTIMONIALS ══════ -->
+<section class="testi">
+    <div class="w">
+        <div class="testi-head" data-v>
+            <div class="tag"><i class="fas fa-heart"></i> Khách hàng nói gì</div>
+            <h2>Được <span class="grad-text">500+ Đại Lý</span> Tin Dùng</h2>
+        </div>
+        <div class="testi-grid">
+            <div class="testi-card" data-v>
+                <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <blockquote>"Trước đây tôi mất 5 tiếng mỗi ngày để canh group. Giờ bot xử lý hết, tôi chỉ cần mở app xem báo cáo. Tiết kiệm cực kỳ nhiều thời gian!"</blockquote>
+                <div class="testi-who">
+                    <div class="testi-av">A</div>
+                    <div><div class="testi-name">Anh Tuấn</div><div class="testi-role">Đại lý tại TP.HCM • 2 năm sử dụng</div></div>
+                </div>
+            </div>
+            <div class="testi-card" data-v style="transition-delay:.1s">
+                <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <blockquote>"Quản lý 15 group cùng lúc mà không sót lệnh nào. Hệ thống chạy mượt mà, báo cáo rõ ràng. Đầu tư rất xứng đáng."</blockquote>
+                <div class="testi-who">
+                    <div class="testi-av">H</div>
+                    <div><div class="testi-name">Chị Hương</div><div class="testi-role">Đại lý tại Hà Nội • 1.5 năm sử dụng</div></div>
+                </div>
+            </div>
+            <div class="testi-card" data-v style="transition-delay:.2s">
+                <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <blockquote>"Tôi đã thử nhiều giải pháp nhưng LottoAutoWin là tốt nhất. Tốc độ xử lý nhanh, chính xác, và team support rất nhiệt tình."</blockquote>
+                <div class="testi-who">
+                    <div class="testi-av">M</div>
+                    <div><div class="testi-name">Anh Minh</div><div class="testi-role">Đại lý tại Đà Nẵng • 8 tháng sử dụng</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════ FAQ ══════ -->
+<section class="faq" id="faq">
+    <div class="w">
+        <div class="faq-head" data-v>
+            <h2>Câu Hỏi <span class="grad-text">Thường Gặp</span></h2>
+            <p>Những thắc mắc phổ biến nhất từ khách hàng của chúng tôi.</p>
+        </div>
+        <div class="faq-list" data-v>
+            <div class="faq-item open">
+                <div class="faq-q" onclick="toggleFaq(this)">LottoAutoWin hoạt động như thế nào? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-a"><div class="faq-a-inner">Bot AI được tích hợp vào group Telegram của bạn. Khi có tin nhắn cược, bot tự động đọc, phân tích cú pháp, tính toán và phản hồi trong 0.1 giây. Mọi dữ liệu được ghi nhận và hiển thị trên dashboard trực quan.</div></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q" onclick="toggleFaq(this)">Mất bao lâu để cài đặt? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-a"><div class="faq-a-inner">Thông thường chỉ trong vòng 24 giờ. Sau khi liên hệ tư vấn, đội ngũ kỹ thuật sẽ cài đặt, cấu hình và test hệ thống cho bạn. Bạn không cần có kiến thức kỹ thuật.</div></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q" onclick="toggleFaq(this)">Có thể quản lý nhiều group không? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-a"><div class="faq-a-inner">Có. Hệ thống hỗ trợ kết nối không giới hạn group Telegram. Tất cả dữ liệu được đồng bộ về một dashboard duy nhất, giúp bạn quản lý tập trung và hiệu quả.</div></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q" onclick="toggleFaq(this)">Dữ liệu có an toàn không? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-a"><div class="faq-a-inner">Tuyệt đối an toàn. Mọi dữ liệu được mã hóa end-to-end, hệ thống phân quyền đa cấp và có audit log chi tiết cho mọi hoạt động. Bạn kiểm soát 100% dòng tiền.</div></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q" onclick="toggleFaq(this)">Có hỗ trợ sau khi mua không? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-a"><div class="faq-a-inner">Có. Đội ngũ hỗ trợ kỹ thuật 24/7 qua Telegram. Mọi vấn đề phát sinh sẽ được xử lý nhanh chóng. Ngoài ra, hệ thống được cập nhật và nâng cấp liên tục.</div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════ CTA ══════ -->
+<section class="cta">
+    <div class="w">
+        <div class="cta-card" data-v>
+            <h2>Sẵn Sàng Tự Động Hóa<br>Hệ Thống Của Bạn?</h2>
+            <p>Liên hệ ngay để được tư vấn miễn phí và thiết lập hệ thống trong vòng 24 giờ.</p>
+            <button class="btn-w" onclick="openM()"><i class="fas fa-paper-plane" style="margin-right:8px"></i>Nhận Tư Vấn Miễn Phí</button>
+        </div>
+    </div>
+</section>
+
+<!-- ══════ FOOTER ══════ -->
+<footer class="foot">
+    <div class="w foot-inner">
+        <div class="foot-l">
+            <img src="logo.jpg.png" alt="Logo" onerror="this.style.display='none'">
+            <b>LottoAutoWin</b>
+        </div>
+        <div class="foot-r">© 2026 LottoAutoWin. Giải pháp Bot Telegram Cao Cấp. All rights reserved.</div>
+    </div>
+</footer>
+
+<!-- ══════ MODAL ══════ -->
+<div class="overlay" id="overlay">
+    <div class="mbox">
+        <button class="cls" onclick="closeM()"><i class="fas fa-times"></i></button>
+        <h3>Yêu Cầu <span class="grad-text">Tư Vấn</span></h3>
+        <p class="mdesc">Để lại thông tin, chuyên gia sẽ liên hệ bạn ngay qua Telegram.</p>
+        <form id="cForm">
+            <input type="text" class="minp" id="f-name" placeholder="Họ và tên" required>
+            <input type="text" class="minp" id="f-contact" placeholder="SĐT hoặc Telegram" required>
+            <input type="text" class="minp" id="f-ref" placeholder="Mã giới thiệu (nếu có)">
+            <textarea class="minp" id="f-msg" placeholder="Lời nhắn..."></textarea>
+            <button type="submit" class="btn1" style="width:100%;justify-content:center"><i class="fab fa-telegram-plane"></i> Gửi Qua Telegram</button>
+        </form>
+    </div>
+</div>
+
+<!-- ══════ SCRIPTS ══════ -->
+<script>
+/* NAV */
+function tMenu(){
+    const m=document.getElementById('menu'), i=document.getElementById('bIcon');
+    m.classList.toggle('open');
+    i.className=m.classList.contains('open')?'fas fa-times':'fas fa-bars';
+}
+function cMenu(){
+    document.getElementById('menu').classList.remove('open');
+    document.getElementById('bIcon').className='fas fa-bars';
+}
+window.addEventListener('scroll',()=>{
+    document.getElementById('topnav').classList.toggle('stuck',scrollY>50);
+});
+
+/* NAV ACTIVE */
+const secs=document.querySelectorAll('section[id]');
+const mLinks=document.querySelectorAll('.menu a');
+window.addEventListener('scroll',()=>{
+    let c='';
+    secs.forEach(s=>{if(scrollY>=s.offsetTop-200)c=s.id});
+    mLinks.forEach(a=>{a.classList.toggle('on',a.getAttribute('href')==='#'+c)});
+});
+
+/* MODAL */
+const ov=document.getElementById('overlay');
+function openM(){ov.classList.add('show');document.body.style.overflow='hidden'}
+function closeM(){ov.classList.remove('show');document.body.style.overflow=''}
+ov.addEventListener('click',e=>{if(e.target===ov)closeM()});
+
+/* FORM */
+document.getElementById('cForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    const n=document.getElementById('f-name').value;
+    const c=document.getElementById('f-contact').value;
+    const r=document.getElementById('f-ref').value;
+    const m=document.getElementById('f-msg').value;
+    const t=encodeURIComponent(`🔥 YÊU CẦU TƯ VẤN 🔥\n\n👤 ${n}\n📱 ${c}\n`+(r?`🎫 Mã: ${r}\n`:'')+`✉️ ${m}`);
+    window.open(`https://t.me/lottoautowinsales?text=${t}`,'_blank');
+    closeM();this.reset();
+});
+
+/* REVEAL */
+const ob=new IntersectionObserver(es=>{
+    es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('seen');ob.unobserve(e.target)}});
+},{threshold:.08,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('[data-v]').forEach(el=>ob.observe(el));
+
+/* TABS */
+document.querySelectorAll('.tab-btn').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+        document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('on'));
+        document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('on'));
+        btn.classList.add('on');
+        document.getElementById(btn.dataset.tab).classList.add('on');
+    });
+});
+
+/* FAQ */
+function toggleFaq(q){
+    const item=q.parentElement;
+    const wasOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+    if(!wasOpen) item.classList.add('open');
+}
+
+/* SMOOTH SCROLL */
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click',e=>{
+        e.preventDefault();
+        const t=document.querySelector(a.getAttribute('href'));
+        if(t)t.scrollIntoView({behavior:'smooth',block:'start'});
+    });
+});
+
+/* LIVE TERMINAL ANIMATION */
+const termLines=[
+    {delay:500,  html:'<span class="t-time">22:45:01</span> <span class="t-user">@NguyenVanA</span>: đề 36 50k'},
+    {delay:1200, html:'<span class="t-time">22:45:01</span> <span class="t-bot">🤖 Bot:</span> ✅ Đã nhận — Đề <span class="t-num">36</span> × <span class="t-num">50,000đ</span>'},
+    {delay:2400, html:'<span class="t-time">22:45:03</span> <span class="t-user">@TranThiB</span>: lô 27,82 100k'},
+    {delay:3200, html:'<span class="t-time">22:45:03</span> <span class="t-bot">🤖 Bot:</span> ✅ Đã nhận — Lô <span class="t-num">27, 82</span> × <span class="t-num">100,000đ</span>'},
+    {delay:4600, html:'<span class="t-time">22:45:05</span> <span class="t-user">@LeVanC</span>: 3càng 456 20k'},
+    {delay:5400, html:'<span class="t-time">22:45:05</span> <span class="t-bot">🤖 Bot:</span> ✅ Đã nhận — 3 Càng <span class="t-num">456</span> × <span class="t-num">20,000đ</span>'},
+    {delay:7000, html:'<span class="t-time">22:45:07</span> <span class="t-ok">📊 Tổng kết:</span> <span class="t-num">3</span> lệnh | Tổng: <span class="t-num">270,000đ</span> | <span class="t-ok">Không lỗi ✓</span>'},
+];
+const termBody=document.getElementById('termBody');
+let termTimeout;
+function runTerminal(){
+    termBody.innerHTML='';
+    termLines.forEach((line,i)=>{
+        setTimeout(()=>{
+            const div=document.createElement('div');
+            div.className='term-line';
+            div.style.animationDelay='.05s';
+            div.innerHTML=line.html;
+            termBody.appendChild(div);
+            termBody.scrollTop=termBody.scrollHeight;
+        },line.delay);
+    });
+    termTimeout=setTimeout(()=>{runTerminal()},9000);
+}
+/* Start terminal when hero visible */
+const termOb=new IntersectionObserver(es=>{
+    es.forEach(e=>{
+        if(e.isIntersecting){runTerminal();termOb.unobserve(e.target)}
+    });
+},{threshold:.3});
+termOb.observe(document.querySelector('.terminal'));
+</script>
+</body>
+</html>
